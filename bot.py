@@ -6,10 +6,10 @@ from datetime import datetime, timedelta
 import logging
 
 
-TOKEN = "8319307503:AAFL5cbFFSKQ6qogQWzj1Pm8jjHa-Hbij3A"  # Замените на токен вашего бота
-API_KEY = "2022f930d9d20d36a90e55d80bcb7bab"  # Замените на ваш API ключ Fixer.io
-BASE_URL = "http://api.exchangeratesapi.io/v1/"  # Или Fixer.io URL
-BASE_CURRENCY = "EUR" # Базовая валюта (обычно EUR для бесплатных планов)
+TOKEN = "8319307503:AAFL5cbFFSKQ6qogQWzj1Pm8jjHa-Hbij3A" 
+API_KEY = "2022f930d9d20d36a90e55d80bcb7bab" 
+BASE_URL = "http://api.exchangeratesapi.io/v1/"  
+BASE_CURRENCY = "EUR" 
 
 
 CURRENCY_OPTIONS = {
@@ -150,7 +150,7 @@ def callback_select_period(call):
     
     parts = call.data.split('_')
     if len(parts) != 3:
-        bot.edit_message_text("⚠️ Ошибка данных при выборе периода. Попробуйте /start снова.", 
+        bot.edit_message_text("Ошибка данных при выборе периода. Попробуйте /start снова.", 
                               call.message.chat.id, call.message.message_id)
         return
 
@@ -178,6 +178,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
